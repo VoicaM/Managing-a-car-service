@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AdaugareAutovehicule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="marca" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="an_fabricatie" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdaugareAutovehiculeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AdaugareTipuriReparatii">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="denumire_reparatie" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdaugareTipuriReparatiiResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AdaugareReparatiiEfectuate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod_reparatie" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cod_auto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="durata_efectuare" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data_finalizare" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdaugareReparatiiEfectuateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ModificareAutovehicule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod_auto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="marca" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="an_fabricatie" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificareAutovehiculeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ModificareTipuriReparatii">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod_reparatie" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="denumire_reparatie" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificareTipuriReparatiiResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ModificareReparatiiEfectuate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nr_crt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cod_reparatie" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cod_auto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="durata_efectuare" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data_finalizare" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificareReparatiiEfectuateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="StergereAutovehicule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod_auto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StergereAutovehiculeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="StergereTipuriReparatii">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cod_reparatie" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StergereTipuriReparatiiResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="StergereReparatiiEfectuate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nr_crt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StergereReparatiiEfectuateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AfisAutovehicule">
+        <s:complexType />
+      </s:element>
+      <s:element name="AfisAutovehiculeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AfisAutovehiculeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AfisTipuriReparatii">
+        <s:complexType />
+      </s:element>
+      <s:element name="AfisTipuriReparatiiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AfisTipuriReparatiiResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AfisReparatiiEfectuate">
+        <s:complexType />
+      </s:element>
+      <s:element name="AfisReparatiiEfectuateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AfisReparatiiEfectuateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AdaugareAutovehiculeSoapIn">
+    <wsdl:part name="parameters" element="tns:AdaugareAutovehicule" />
+  </wsdl:message>
+  <wsdl:message name="AdaugareAutovehiculeSoapOut">
+    <wsdl:part name="parameters" element="tns:AdaugareAutovehiculeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdaugareTipuriReparatiiSoapIn">
+    <wsdl:part name="parameters" element="tns:AdaugareTipuriReparatii" />
+  </wsdl:message>
+  <wsdl:message name="AdaugareTipuriReparatiiSoapOut">
+    <wsdl:part name="parameters" element="tns:AdaugareTipuriReparatiiResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdaugareReparatiiEfectuateSoapIn">
+    <wsdl:part name="parameters" element="tns:AdaugareReparatiiEfectuate" />
+  </wsdl:message>
+  <wsdl:message name="AdaugareReparatiiEfectuateSoapOut">
+    <wsdl:part name="parameters" element="tns:AdaugareReparatiiEfectuateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificareAutovehiculeSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificareAutovehicule" />
+  </wsdl:message>
+  <wsdl:message name="ModificareAutovehiculeSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificareAutovehiculeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificareTipuriReparatiiSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificareTipuriReparatii" />
+  </wsdl:message>
+  <wsdl:message name="ModificareTipuriReparatiiSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificareTipuriReparatiiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificareReparatiiEfectuateSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificareReparatiiEfectuate" />
+  </wsdl:message>
+  <wsdl:message name="ModificareReparatiiEfectuateSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificareReparatiiEfectuateResponse" />
+  </wsdl:message>
+  <wsdl:message name="StergereAutovehiculeSoapIn">
+    <wsdl:part name="parameters" element="tns:StergereAutovehicule" />
+  </wsdl:message>
+  <wsdl:message name="StergereAutovehiculeSoapOut">
+    <wsdl:part name="parameters" element="tns:StergereAutovehiculeResponse" />
+  </wsdl:message>
+  <wsdl:message name="StergereTipuriReparatiiSoapIn">
+    <wsdl:part name="parameters" element="tns:StergereTipuriReparatii" />
+  </wsdl:message>
+  <wsdl:message name="StergereTipuriReparatiiSoapOut">
+    <wsdl:part name="parameters" element="tns:StergereTipuriReparatiiResponse" />
+  </wsdl:message>
+  <wsdl:message name="StergereReparatiiEfectuateSoapIn">
+    <wsdl:part name="parameters" element="tns:StergereReparatiiEfectuate" />
+  </wsdl:message>
+  <wsdl:message name="StergereReparatiiEfectuateSoapOut">
+    <wsdl:part name="parameters" element="tns:StergereReparatiiEfectuateResponse" />
+  </wsdl:message>
+  <wsdl:message name="AfisAutovehiculeSoapIn">
+    <wsdl:part name="parameters" element="tns:AfisAutovehicule" />
+  </wsdl:message>
+  <wsdl:message name="AfisAutovehiculeSoapOut">
+    <wsdl:part name="parameters" element="tns:AfisAutovehiculeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AfisTipuriReparatiiSoapIn">
+    <wsdl:part name="parameters" element="tns:AfisTipuriReparatii" />
+  </wsdl:message>
+  <wsdl:message name="AfisTipuriReparatiiSoapOut">
+    <wsdl:part name="parameters" element="tns:AfisTipuriReparatiiResponse" />
+  </wsdl:message>
+  <wsdl:message name="AfisReparatiiEfectuateSoapIn">
+    <wsdl:part name="parameters" element="tns:AfisReparatiiEfectuate" />
+  </wsdl:message>
+  <wsdl:message name="AfisReparatiiEfectuateSoapOut">
+    <wsdl:part name="parameters" element="tns:AfisReparatiiEfectuateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="AdaugareAutovehicule">
+      <wsdl:input message="tns:AdaugareAutovehiculeSoapIn" />
+      <wsdl:output message="tns:AdaugareAutovehiculeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareTipuriReparatii">
+      <wsdl:input message="tns:AdaugareTipuriReparatiiSoapIn" />
+      <wsdl:output message="tns:AdaugareTipuriReparatiiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareReparatiiEfectuate">
+      <wsdl:input message="tns:AdaugareReparatiiEfectuateSoapIn" />
+      <wsdl:output message="tns:AdaugareReparatiiEfectuateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificareAutovehicule">
+      <wsdl:input message="tns:ModificareAutovehiculeSoapIn" />
+      <wsdl:output message="tns:ModificareAutovehiculeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificareTipuriReparatii">
+      <wsdl:input message="tns:ModificareTipuriReparatiiSoapIn" />
+      <wsdl:output message="tns:ModificareTipuriReparatiiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificareReparatiiEfectuate">
+      <wsdl:input message="tns:ModificareReparatiiEfectuateSoapIn" />
+      <wsdl:output message="tns:ModificareReparatiiEfectuateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StergereAutovehicule">
+      <wsdl:input message="tns:StergereAutovehiculeSoapIn" />
+      <wsdl:output message="tns:StergereAutovehiculeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StergereTipuriReparatii">
+      <wsdl:input message="tns:StergereTipuriReparatiiSoapIn" />
+      <wsdl:output message="tns:StergereTipuriReparatiiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StergereReparatiiEfectuate">
+      <wsdl:input message="tns:StergereReparatiiEfectuateSoapIn" />
+      <wsdl:output message="tns:StergereReparatiiEfectuateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AfisAutovehicule">
+      <wsdl:input message="tns:AfisAutovehiculeSoapIn" />
+      <wsdl:output message="tns:AfisAutovehiculeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AfisTipuriReparatii">
+      <wsdl:input message="tns:AfisTipuriReparatiiSoapIn" />
+      <wsdl:output message="tns:AfisTipuriReparatiiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AfisReparatiiEfectuate">
+      <wsdl:input message="tns:AfisReparatiiEfectuateSoapIn" />
+      <wsdl:output message="tns:AfisReparatiiEfectuateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AdaugareAutovehicule">
+      <soap:operation soapAction="http://tempuri.org/AdaugareAutovehicule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareTipuriReparatii">
+      <soap:operation soapAction="http://tempuri.org/AdaugareTipuriReparatii" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareReparatiiEfectuate">
+      <soap:operation soapAction="http://tempuri.org/AdaugareReparatiiEfectuate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificareAutovehicule">
+      <soap:operation soapAction="http://tempuri.org/ModificareAutovehicule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificareTipuriReparatii">
+      <soap:operation soapAction="http://tempuri.org/ModificareTipuriReparatii" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificareReparatiiEfectuate">
+      <soap:operation soapAction="http://tempuri.org/ModificareReparatiiEfectuate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StergereAutovehicule">
+      <soap:operation soapAction="http://tempuri.org/StergereAutovehicule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StergereTipuriReparatii">
+      <soap:operation soapAction="http://tempuri.org/StergereTipuriReparatii" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StergereReparatiiEfectuate">
+      <soap:operation soapAction="http://tempuri.org/StergereReparatiiEfectuate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AfisAutovehicule">
+      <soap:operation soapAction="http://tempuri.org/AfisAutovehicule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AfisTipuriReparatii">
+      <soap:operation soapAction="http://tempuri.org/AfisTipuriReparatii" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AfisReparatiiEfectuate">
+      <soap:operation soapAction="http://tempuri.org/AfisReparatiiEfectuate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AdaugareAutovehicule">
+      <soap12:operation soapAction="http://tempuri.org/AdaugareAutovehicule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareTipuriReparatii">
+      <soap12:operation soapAction="http://tempuri.org/AdaugareTipuriReparatii" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdaugareReparatiiEfectuate">
+      <soap12:operation soapAction="http://tempuri.org/AdaugareReparatiiEfectuate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificareAutovehicule">
+      <soap12:operation soapAction="http://tempuri.org/ModificareAutovehicule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificareTipuriReparatii">
+      <soap12:operation soapAction="http://tempuri.org/ModificareTipuriReparatii" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificareReparatiiEfectuate">
+      <soap12:operation soapAction="http://tempuri.org/ModificareReparatiiEfectuate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StergereAutovehicule">
+      <soap12:operation soapAction="http://tempuri.org/StergereAutovehicule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StergereTipuriReparatii">
+      <soap12:operation soapAction="http://tempuri.org/StergereTipuriReparatii" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StergereReparatiiEfectuate">
+      <soap12:operation soapAction="http://tempuri.org/StergereReparatiiEfectuate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AfisAutovehicule">
+      <soap12:operation soapAction="http://tempuri.org/AfisAutovehicule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AfisTipuriReparatii">
+      <soap12:operation soapAction="http://tempuri.org/AfisTipuriReparatii" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AfisReparatiiEfectuate">
+      <soap12:operation soapAction="http://tempuri.org/AfisReparatiiEfectuate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="https://localhost:44370/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="https://localhost:44370/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

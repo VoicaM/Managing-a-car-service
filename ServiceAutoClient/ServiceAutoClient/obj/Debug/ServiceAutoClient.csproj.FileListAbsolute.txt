@@ -1,0 +1,16 @@
+C:\Users\Maria\source\repos\ServiceAutoClient\ServiceAutoClient\bin\Debug\ServiceAutoClient.exe.config
+C:\Users\Maria\source\repos\ServiceAutoClient\ServiceAutoClient\bin\Debug\ServiceAutoClient.exe
+C:\Users\Maria\source\repos\ServiceAutoClient\ServiceAutoClient\bin\Debug\ServiceAutoClient.pdb
+C:\Users\Maria\source\repos\ServiceAutoClient\ServiceAutoClient\obj\Debug\ServiceAutoClient.csproj.AssemblyReference.cache
+C:\Users\Maria\source\repos\ServiceAutoClient\ServiceAutoClient\obj\Debug\ServiceAutoClient.Form1.resources
+C:\Users\Maria\source\repos\ServiceAutoClient\ServiceAutoClient\obj\Debug\ServiceAutoClient.Properties.Resources.resources
+C:\Users\Maria\source\repos\ServiceAutoClient\ServiceAutoClient\obj\Debug\ServiceAutoClient.csproj.GenerateResource.cache
+C:\Users\Maria\source\repos\ServiceAutoClient\ServiceAutoClient\obj\Debug\ServiceAutoClient.csproj.CoreCompileInputs.cache
+C:\Users\Maria\source\repos\ServiceAutoClient\ServiceAutoClient\obj\Debug\ServiceAutoClient.exe
+C:\Users\Maria\source\repos\ServiceAutoClient\ServiceAutoClient\obj\Debug\ServiceAutoClient.pdb
+C:\Users\Maria\source\repos\ServiceAutoClient\ServiceAutoClient\obj\Debug\ServiceAutoClient.Autovehicule.resources
+C:\Users\Maria\source\repos\ServiceAutoClient\ServiceAutoClient\obj\Debug\ServiceAutoClient.Reparatii.resources
+C:\Users\Maria\source\repos\ServiceAutoClient\ServiceAutoClient\obj\Debug\ServiceAutoClient.ReparatiiEfectuate.resources
+C:\Users\Maria\source\repos\ServiceAutoClient\ServiceAutoClient\obj\Debug\ServiceAutoClient.VizualizareTipuriReparatii.resources
+C:\Users\Maria\source\repos\ServiceAutoClient\ServiceAutoClient\obj\Debug\ServiceAutoClient.VizualizareAutovehicule.resources
+C:\Users\Maria\source\repos\ServiceAutoClient\ServiceAutoClient\obj\Debug\ServiceAutoClient.SelectareAuto.resources

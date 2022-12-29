@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceAutoWeb", "ServiceAutoWeb\ServiceAutoWeb.csproj", "{F3536F3E-525A-4C00-B6F1-5EB4C3E0C4D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3536F3E-525A-4C00-B6F1-5EB4C3E0C4D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3536F3E-525A-4C00-B6F1-5EB4C3E0C4D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3536F3E-525A-4C00-B6F1-5EB4C3E0C4D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3536F3E-525A-4C00-B6F1-5EB4C3E0C4D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8EA2E4D-AAB5-4BE2-A271-4E0754AA19DD}
+	EndGlobalSection
+EndGlobal
